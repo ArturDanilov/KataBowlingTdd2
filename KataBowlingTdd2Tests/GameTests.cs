@@ -215,29 +215,61 @@ namespace KataBowlingTdd2Tests
         public void AddRoll_LostGame_Return133()
         {
             _game.AddRoll(1); // 1
-            _game.AddRoll(4); // 5 <-- 0
+            _game.AddRoll(4); // 5 <-- 1
             _game.AddRoll(4); // 9
-            _game.AddRoll(5); // 14 <-- 1
+            _game.AddRoll(5); // 14 <-- 2
             _game.AddRoll(6); // 20
-            _game.AddRoll(4); // 24 <-- 2
+            _game.AddRoll(4); // 29 <-- 3
             _game.AddRoll(5); // 34
-            _game.AddRoll(5); // 39 <-- 3
-            _game.AddRoll(10); // 59
-            _game.AddRoll(0);
-            _game.AddRoll(0); // 59
-            _game.AddRoll(1); // 61
+            _game.AddRoll(5); // 49 <-- 4
+            _game.AddRoll(10); // 60 
+            _game.AddRoll(0); // 60 <-- 5
+            _game.AddRoll(0); // 60
+            _game.AddRoll(1); // 61 <-- 6
             _game.AddRoll(7); // 68
-            _game.AddRoll(3); // 71
+            _game.AddRoll(3); // 77 <-- 7
             _game.AddRoll(6); // 83
-            _game.AddRoll(4); // 87
-            _game.AddRoll(10); // 107
-            _game.AddRoll(0);
-            _game.AddRoll(2); // 111
-            _game.AddRoll(8); // 127
+            _game.AddRoll(4); // 97 <-- 8
+            _game.AddRoll(10); // 117 
+            _game.AddRoll(0); // 117 <-- 9
+            _game.AddRoll(2); // 119
+            _game.AddRoll(8); // 127 <-- 10
             _game.AddRoll(6); // 133
 
             Assert.That(_game.TotalScore, Is.EqualTo(133));
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //[Test]
         //public void AddRoll_Eingabe10Spare_ReturnScore150()
