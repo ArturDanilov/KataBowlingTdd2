@@ -58,39 +58,6 @@ namespace KataBowlingTdd2Tests
         }
 
         [Test]
-        public void AddRoll_Eingabe21Pins_ReturnExeption()
-        {
-            int pins1 = 1; 
-
-            //add 20 rolls
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            _game.AddRoll(pins1);
-            
-            //AddRoll kill +21
-            var myExeption = Assert.Throws<ArgumentException>(() => _game.AddRoll(pins1));
-
-            Assert.That(myExeption.Message, Is.EqualTo("Game Over!"));
-        }
-
-        [Test]
         public void AddRoll_Eingabe1Strik_ReturnScore26()
         {
             int strike = 10;

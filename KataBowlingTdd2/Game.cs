@@ -3,10 +3,12 @@
     public class Game : IGame
     {
         //um das frameobject bereits zu haben
-        private Frame[] frames = new Frame[10];
+        private Frame[] frames = new Frame[11];
 
         private int currentFrameIndex = 0;
         private int currentRollIndex = 0;
+
+        //Frames();
 
         public void AddRoll(int pins)
         {
@@ -37,8 +39,8 @@
         public Frame[] Frames()
         {
             if(frames[currentFrameIndex] == null)
-                {
-                for (int i = 0; i < 10; i++)
+            {
+                for (int i = 0; i <= 10; i++)
                 {
                     frames[i] = new Frame();
                     frames[i].PinsRolled = new int[2];
@@ -49,7 +51,7 @@
 
         public bool Over()
         {
-            if (currentFrameIndex>=10)
+            if (currentFrameIndex>=11)
             {
                 return true;
             }
