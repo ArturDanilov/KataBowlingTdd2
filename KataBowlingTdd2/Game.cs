@@ -8,11 +8,9 @@
         private int currentFrameIndex = 0;
         private int currentRollIndex = 0;
 
-        //Frames();
-
         public void AddRoll(int pins)
         {
-            //max 10 frames
+            //max 11 frames inkl Bonus
             if (!Over())
             {
                 Frames();
@@ -69,6 +67,7 @@
                 {
                     totalScore += 10 + frames[i + 1].PinsRolled[0] + frames[i + 1].PinsRolled[1];
                 }
+                //if spare
                 else if (frames[i].PinsRolled[0] + frames[i].PinsRolled[1] == 10)
                 {
                     totalScore += 10 + frames[i + 1].PinsRolled[0];
